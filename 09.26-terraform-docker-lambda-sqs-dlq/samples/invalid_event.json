@@ -1,0 +1,5 @@
+{
+  "transaction_id": "tx-999999",
+  "status": "FAILED",
+  "simulate_error": true
+}

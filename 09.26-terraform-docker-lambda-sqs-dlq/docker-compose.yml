@@ -1,0 +1,12 @@
+services:
+  localstack:
+    container_name: localstack_sre_lab
+    image: localstack/localstack:3.8.1
+    ports:
+      - "127.0.0.1:4566:4566"
+      - "127.0.0.1:4510-4559:4510-4559"
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "./.localstack:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
